@@ -33,13 +33,13 @@ public class main {
 		while(numberGuessed == false) {
 			
 			// Asking user for a guess between bounds
-			System.out.println("Enter a number between " + min + " and " + max);
+			System.out.print("Enter a number between " + min + " and " + max + ": ");
 			guess = keyboard.nextInt();
 
 			// Bounds checking
 			if(guess < min || guess > max) {
 				do {
-					System.out.println("Enter a number between " + min + " and " + max);
+					System.out.print("Enter a number between " + min + " and " + max + ": ");
 					guess = keyboard.nextInt();
 				}while(guess < min || guess > max);
 				
@@ -59,7 +59,8 @@ public class main {
 			
 		}
 		
-		System.out.println("The number was " + secretNumber);
+		// Congratulatory message
+		System.out.println("Congratulations!\nThe number was " + secretNumber);
 		
 		keyboard.close();
 
